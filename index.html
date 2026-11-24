@@ -41,6 +41,25 @@ h2{font-size:clamp(26px,3.8vw,38px);font-weight:700;margin-bottom:24px}
 .marca span:last-child{font-size:14px;opacity:.85}
 .heroi{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
 .heroi>div{min-width:0}
+.mock{position:relative;width:100%;max-width:520px;margin:auto;aspect-ratio:520/440;container-type:inline-size}
+.mk-luz{position:absolute;left:8%;top:6%;width:70%;height:80%;border-radius:50%;background:radial-gradient(circle,#ffd8a855 0,transparent 65%)}
+.mk-livro{position:absolute;left:4%;top:5%;width:52%;height:86%;background:var(--verde2);border-radius:1.2cqw 3cqw 3cqw 1.2cqw;box-shadow:-3cqw 4cqw 8cqw #0008,inset 1.8cqw 0 0 #0f2b27;transform:rotate(-4deg);padding:5cqw 4cqw 0 5.5cqw;overflow:hidden;text-align:left}
+.mk-etq{display:inline-block;border:.3cqw solid var(--areia);color:var(--areia);font:700 1.9cqw var(--display);letter-spacing:.3cqw;padding:.5cqw 1.6cqw;border-radius:1cqw}
+.mk-tit{font:700 6.6cqw/1 var(--display);color:#fff;margin-top:2.5cqw}.mk-tit span{color:var(--coral)}
+.mk-sub{font-size:2.3cqw;line-height:1.35;margin-top:2cqw;color:var(--menta)}
+.mk-chao{position:absolute;left:0;right:0;bottom:0;height:16%;background:var(--menta)}
+.mk-gato{position:absolute;left:22%;bottom:7%;width:60%}
+.mk-rod{position:absolute;left:0;right:0;bottom:3.2cqw;text-align:center;font:700 1.6cqw var(--display);letter-spacing:.25cqw;color:var(--verde)}
+.mk-cel{position:absolute;right:3%;top:14%;width:34%;height:76%;background:#0f2b27;border-radius:6cqw;padding:1.8cqw;box-shadow:0 4cqw 8cqw #0009;transform:rotate(4deg)}
+.mk-tela{height:100%;background:var(--menta);border-radius:4.5cqw;padding:5.5cqw 2.2cqw 2cqw;position:relative;color:var(--verde);text-align:left;overflow:hidden}
+.mk-tela:before{content:"";position:absolute;top:1.8cqw;left:50%;transform:translateX(-50%);width:11cqw;height:1.8cqw;border-radius:2cqw;background:#0f2b27}
+.mk-tela b{font:700 2.1cqw var(--display);letter-spacing:.2cqw;display:block;margin-bottom:1.6cqw}
+.mk-it{display:flex;gap:1.3cqw;align-items:center;background:#fff;border-radius:1.6cqw;padding:1.3cqw 1.5cqw;margin-bottom:1.3cqw;font:600 1.9cqw/1.2 var(--display)}
+.mk-it i{flex:none;width:4cqw;height:4cqw;border-radius:50%;background:var(--coral);color:#fff;font:700 1.6cqw/4cqw var(--display);text-align:center;font-style:normal}
+.mk-it div{flex:1;min-width:0}
+.mk-it u{display:block;height:.6cqw;border-radius:1cqw;margin-top:.8cqw;background:linear-gradient(90deg,var(--coral) var(--p),#cfe0d6 var(--p))}
+.mk-selo{position:absolute;left:1%;bottom:2%;width:22cqw;height:22cqw;border-radius:50%;background:var(--coral);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font:700 2.3cqw/1.15 var(--display);box-shadow:0 2cqw 5cqw #0006;transform:rotate(-8deg)}
+.mk-selo b{font-size:8cqw;line-height:.95}
 .ilus{background:var(--verde2);border-radius:28px;padding:28px;text-align:center}
 .ilus .disp{font-size:30px;color:var(--areia);margin-top:8px}
 .gato{width:100%;max-width:250px;display:block;margin:auto}
@@ -86,7 +105,7 @@ h2{font-size:clamp(26px,3.8vw,38px);font-weight:700;margin-bottom:24px}
 .faq summary{cursor:pointer;font-weight:700}
 .faq p{padding-top:10px}
 footer{background:#0f2b27;color:var(--menta);text-align:center;font-size:13px;line-height:2;padding-block:30px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-@media(max-width:820px){.heroi,.ganhos,.presentes,.lista{grid-template-columns:1fr}.passos{grid-template-columns:1fr 1fr}.heroi .ilus{order:2}}
+@media(max-width:820px){.heroi,.ganhos,.presentes,.lista{grid-template-columns:1fr}.passos{grid-template-columns:1fr 1fr}.heroi .mock{order:2}}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}}
 </style>
 </head><body>
@@ -96,8 +115,14 @@ footer{background:#0f2b27;color:var(--menta);text-align:center;font-size:13px;li
 
 <section class="faixa esc">
   <div class="w heroi">
-    <div class="ilus">
-      <svg class="gato" viewBox="0 0 200 190" role="img" aria-label="Gato laranja sentado">
+    <div class="mock" role="img" aria-label="Capa do guia Decifrando Seu Gato e a lista de capítulos no celular">
+      <div class="mk-luz"></div>
+      <div class="mk-livro">
+        <span class="mk-etq">GUIA COMPLETO</span>
+        <p class="mk-tit">DECIFRANDO<br><span>SEU GATO</span></p>
+        <p class="mk-sub">O que seu gato diz e como responder, sem gritos e sem castigo</p>
+        <div class="mk-chao"></div>
+        <svg class="mk-gato" viewBox="0 0 200 190" role="img" aria-label="Gato laranja sentado">
         <ellipse cx="100" cy="178" rx="68" ry="8" fill="#0000004d"/>
         <path d="M148 168 q44 -6 34 -58 q-4 -14 -14 -6" stroke="#e08a3c" stroke-width="13" fill="none" stroke-linecap="round"/>
         <ellipse cx="100" cy="132" rx="54" ry="44" fill="#f2a14f"/>
@@ -113,8 +138,16 @@ footer{background:#0f2b27;color:var(--menta);text-align:center;font-size:13px;li
         <path d="M100 94 q-6 7 -12 2 M100 94 q6 7 12 2" stroke="#16302c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
         <path d="M60 86 h-24 M60 92 l-22 6 M140 86 h24 M140 92 l22 6" stroke="#ffe2c0" stroke-width="2.5" stroke-linecap="round"/>
       </svg>
-      <p class="disp">Decifrando<br>seu gato</p>
-      <p style="font-size:14px;margin-top:6px">Guia ilustrado em 5 etapas</p>
+        <p class="mk-rod">5 ETAPAS · 17 CAPÍTULOS · PLANO DE 21 DIAS</p>
+      </div>
+      <div class="mk-cel"><div class="mk-tela"><b>SEU GUIA</b>
+        <div class="mk-it"><i>01</i><div>O vocabulário do gato<u style="--p:100%"></u></div></div>
+        <div class="mk-it"><i>03</i><div>Caixa de areia sem drama<u style="--p:80%"></u></div></div>
+        <div class="mk-it"><i>04</i><div>Arranhões nos móveis<u style="--p:55%"></u></div></div>
+        <div class="mk-it"><i>05</i><div>Miados de madrugada<u style="--p:35%"></u></div></div>
+        <div class="mk-it"><i>07</i><div>Mordidas no carinho<u style="--p:15%"></u></div></div>
+      </div></div>
+      <div class="mk-selo"><b>17</b>CAPÍTULOS<br>+ 3 BÔNUS</div>
     </div>
     <div>
       <span class="selo">17 capítulos + 3 presentes</span>
@@ -267,4 +300,5 @@ footer{background:#0f2b27;color:var(--menta);text-align:center;font-size:13px;li
   Conteúdo educativo. Não substitui o veterinário nem o profissional de comportamento.<br>
   © 2026 Decifrando Seu Gato. Pagamento processado pela Kiwify.
 </footer>
+
 </body></html>
